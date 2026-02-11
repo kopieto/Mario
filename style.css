@@ -253,9 +253,7 @@ input:focus {
 }
 /* .....................................................................cards..................................... */
 @media (max-width: 800px) {
-  #hero-image {
-    width: 90%;
-  }
+
   .hero {
     padding-top: 50px;
     justify-content: space-evenly;
