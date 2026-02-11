@@ -347,6 +347,18 @@ footer {
   font-size: 1.5rem;
   line-height: 0;
 }
+.fa-facebook {
+  color: #1778F2;
+}
+.fa-instagram{
+  color: #F56040;
+}
+.fa-twitter {
+  color: #1DA1F2;
+}
+.fa-youtube {
+  color: #FF0000;
+}
 
 /* ==========================================================================
    7. RESPONSIVE DESIGN (MEDIA QUERIES)
