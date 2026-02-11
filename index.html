@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mario Painter and Decorator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Diplomata+SC&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./section.css" />
+
+
+
+
+    <!--  emailjs-->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "kEnvBd1-hMGlPtBST",
+      });
+   })();
+</script>
+    <!--  emailjs-->
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand-title">Mario Painter & Decorator</div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#cards">Services</a></li>
+          <li><a href="#contact-info">Contact</a></li>
+          <li><a href="https://www.facebook.com/photo/?fbid=848055803982454&set=pb.100063341252770.-2207520000">Galery</a></li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+        <div class="hero-message">
+          <h1 class="hero-title">Home Improvement Services</h1>
+          <p>
+            Transform your space with our expert home improvement solutions
+            tailored to your needs and style.
+          </p>
+        </div>
+        <div class="hero-form">
+          <form class="form" id="hero-form">
+        <input type="text" name="name" placeholder="name" required>
+                <input type="email" name="email" placeholder="email" required>
+
+
+            <textarea name="message" id="quote" class="quote" placeholder="Write your message here" maxlength="200" required></textarea>
+            <button class="btn" type="submit">SEND</button>
+          </form>
+        </div>
+    </section>
+
+
+
+
+<!-- .....................................................Cards................................................... -->
+  <section id="cards" class="card-container">
+  <div class="card">
+    <div class="card-icon">🎨</div>
+    <div class="card-content">
+      <span class="badge">Interior</span>
+      <h3>Wall Painting</h3>
+      <p>Precision edging and smooth finishes using premium, eco-friendly paints.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">🏠</div>
+    <div class="card-content">
+      <span class="badge">Exterior</span>
+      <h3>Weatherproofing</h3>
+      <p>Durable masonry painting and wood treatment to protect your home from the elements.</p>
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="card-icon">📜</div>
+    <div class="card-content">
+      <span class="badge">Decor</span>
+      <h3>Wallpapering</h3>
+      <p>Expert hanging of patterned, textured, or bespoke designer wall coverings.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">🛠️</div>
+    <div class="card-content">
+      <span class="badge">Repair</span>
+      <h3>General Maintenance</h3>
+      <p>Plaster repairs, wood rot treatment, and minor structural fixes before we paint.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">🚪</div>
+    <div class="card-content">
+      <span class="badge">Woodwork</span>
+      <h3>Sash & Trim</h3>
+      <p>Restoring skirting boards, doors, and window frames to their former glory.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">✨</div>
+    <div class="card-content">
+      <span class="badge">Quality</span>
+      <h3>Aftercare</h3>
+      <p>Deep cleaning post-job and a 2-year guarantee on all decorating work.</p>
+    </div>
+  </div>
+</section>
+<!-- ................................................................Cards............................................. -->
+<!-- ................................................................Contact........................................... -->
+<section id="contact" class="contact-section">
+
+    <h3 id="contact-info">Contact Information</h3>
+        <p><strong>📞 Phone:</strong> +1 (555) 000-0000</p>
+        <p><strong>✉️ Email:</strong> support@yourdomain.com</p>
+    <h2>Get a Free Quote</h2>
+    <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+  </div>
+
+  <form id="contact-form" class="contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" placeholder="John Doe" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" placeholder="john@example.com" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" placeholder="+44 123 456789">
+      </div>
+      <div class="form-group">
+        <label for="service">Service Needed</label>
+        <select name="service" id="service"> 
+          <option value="interior">Interior Painting</option>
+          <option value="exterior">Exterior Painting</option>
+          <option value="wallpapering">Wallpapering</option>
+          <option value="repairs">Repairs & Maintenance</option>
+          <option value="repairs">Other</option>
+
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Project Details</label>
+      <textarea name="message" id="message" placeholder="Please describe the rooms, surfaces, or repairs needed..." maxlength="200" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send Quote Request</button>
+  </form>
+</section>
+<!-- ................................................................Footer............................................ -->
+    <footer>
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/profile.php?id=100063341252770"
+          target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+      </div>
+
+      <div class="designer-line">
+        <p>Designed by <span class="designer">Tsetso</span></p>
+      </div>
+    </footer>
+
+    <script src="./index.js" defer></script>
+  </body>
+</html>
