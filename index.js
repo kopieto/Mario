@@ -35,22 +35,5 @@ window.onload = function() {
             });
     });
 }
-window.onload = function() {
-    const form = document.getElementById('hero-form');
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
 
-        // These IDs from your EmailJS dashboard
-        const serviceID = 'service_4qxahgm';
-        const templateID = 'template_pak5trb';
 
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-                alert('Thank you for sending us a message. Will be contact you back shortly');
-                form.reset(); // Clear the form
-            }, (error) => {
-                alert('Failed to send: ' + JSON.stringify(error));
-            });
-    });
-}

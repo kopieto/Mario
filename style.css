@@ -28,6 +28,7 @@ body {
   display: flex;
   position: fixed;
   top: 0;
+  height: 50px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -60,7 +61,8 @@ body {
 }
 
 .navbar-links li a:hover {
-  color: #efe9e3;
+  color: var(--my-blue-color);
+
 }
 
 /* Mobile Toggle */
@@ -95,59 +97,67 @@ body {
 
 .hero-container {
   height: 100vh;
-  aspect-ratio: 16/9;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 3rem;
-  background-size: contain;
-  background-repeat: no-repeat;
+
+  /* Use 'cover' to ensure images fill the screen on all devices */
+  background-size: cover;
   background-position: center;
-  border-radius: 20px;
-  animation: slide cubic-bezier(0.2, 1, 0.2, 1) 60s infinite;
+  background-repeat: no-repeat;
+
+  position: relative;
+  overflow: hidden;
+
+  /* Smoother transition timing */
+  transition: background-image 1.5s ease-in-out;
+  animation: slide 30s infinite; /* Reduced time for more engagement */
+}
+.hero-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* Subtle dark tint */
+  z-index: 1;
 }
 
 .hero-message {
-  margin-top: 50px;
+  z-index: 2; /* Sits above the dark overlay */
+  background: rgba(255, 255, 255, 0.05); /* Glassmorphism effect */
+  backdrop-filter: blur(2px); /* Blurs the background behind the text */
+  -webkit-backdrop-filter: blur(8px);
+  padding: 3rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 850px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .hero-title {
-  font-size: 3rem;
-  padding: 10px 2%;
-  margin: 0;
-  color: black;
-  text-shadow:
-    -1px -1px 0 var(--my-brown-color),
-    1px -1px 0 var(--my-white-color),
-    -1px 1px 0 var(--my-brown-color),
-    1px 1px 0 var(--my-white-color);
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Responsive scaling */
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+  padding: 0;
 }
 
 .hero p {
-  font-family: "Bonheur Royale", cursive;
-  color: black;
-  font-size: 2rem;
-  padding: 0 2%;
-  margin: 0;
-  font-weight: 800;
-  text-shadow:
-    -1px -1px 0 var(--my-white-color),
-    1px -1px 0 var(--my-brown-color),
-    -1px 1px 0 var(--my-white-color),
-    1px 1px 0 var(--my-brown-color);
+  color: #efe9e3;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* ==========================================================================
    4. FORMS & INPUTS
    ========================================================================== */
-.hero-form {
-  width: 90%;
-  max-width: 600px;
-  margin: 0 auto; /* Keeps it centered */
-}
-
 .form {
   width: 100%;
   height: 100%;
@@ -333,8 +343,11 @@ footer {
   display: flex;
   justify-content: center;
   gap: 36px;
+  font-size: 1.5rem;
 }
-
+.social-icons i:hover {
+  font-size: 2.5rem;
+}
 .designer-line {
   position: absolute;
   right: 50px;
@@ -347,17 +360,29 @@ footer {
   font-size: 1.5rem;
   line-height: 0;
 }
-.facebook {
-  color: #1778F2;
+footer:hover .designer-line {
+  display: none;
 }
-.instagram{
-  color: #F56040;
+footer:hover::after {
+  position: absolute;
+  right: 50px;
+  content: "ceco.sirakov@gmail.com";
+  color: #f9f8f6;
+  font-size: 1rem;
+  line-height: 0;
+}
+
+.facebook {
+  color: #1778f2;
+}
+.instagram {
+  color: #f56040;
 }
 .twitter {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 .youtube {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 /* ==========================================================================
@@ -426,18 +451,85 @@ footer {
   .quote {
     width: 100%;
   }
+
+  /*  */
   .hero-container {
-    width: 100%;
-    aspect-ratio: unset;
+    padding: 0 15px; /* Tighter padding on sides */
+    /* Ensure the background doesn't squish */
     background-size: cover;
+    height: 100vh;
   }
+
+  .hero-message {
+    width: 85%;
+    padding: 2rem 1.5rem;
+    background: rgba(
+      255,
+      255,
+      255,
+      0.15
+    ); /* Slightly more opaque for readability */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-title {
+    font-size: 1.75rem; /* Prevents text from being too overwhelming */
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #f9f8f6;
+    font-family:
+      "Raleway", sans-serif; /* Clean sans-serif is easier to read on mobile */
+    font-weight: 500;
+  }
+
+  /* Adjust the button if you added one */
+  .hero-message .submit-btn {
+    font-size: 1rem;
+    padding: 12px 24px;
+    margin-top: 15px;
+  }
+  /*  */
+
   .form-row {
     grid-template-columns: 1fr;
   }
   .card-container {
-  max-width: 90%;
-  
-}
+    max-width: 95%; /* Increased width to give more room for two columns */
+    grid-template-columns: repeat(2, 1fr); /* Forces exactly 2 columns */
+    gap: 10px; /* Reduced gap so cards don't feel too cramped */
+    padding-top: 40px;
+  }
+
+  .card {
+    padding: 20px 10px; /* Reduced padding inside cards for better fit */
+  }
+
+  .card-icon {
+    font-size: 1.5rem; /* Slightly smaller icons for mobile */
+  }
+
+  .card h3 {
+    font-size: 1rem; /* Adjust heading size to prevent text overflow */
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+  .card p {
+    display: none; /* Shows only icon and title for a cleaner grid */
+  }
+
   footer {
     position: relative;
     overflow: hidden;
@@ -450,23 +542,29 @@ footer {
   .designer-line span {
     font-size: 1rem;
   }
+  footer:hover::after {
+    font-size: 1rem;
+    right: 10px;
+    bottom: 10px;
+  }
 }
 
 /* ==========================================================================
    8. ANIMATIONS
    ========================================================================== */
+
 @keyframes slide {
   0%,
   100% {
-    background-image: url("./assets/16-9/Screen16-9\ 1.jpg");
+    background-image: url("./assets/16-9/Screen16-9 1.jpg");
   }
   25% {
-    background-image: url("./assets/16-9/Screen16-9\ 2.jpg");
+    background-image: url("./assets/16-9/Screen16-9 2.jpg");
   }
   50% {
-    background-image: url("./assets/16-9/Screen16-9\ 3.jpg");
+    background-image: url("./assets/16-9/Screen16-9 3.jpg");
   }
   75% {
-    background-image: url("./assets/16-9/Screen16-9\ 4.jpg");
+    background-image: url("./assets/16-9/Screen16-9 4.jpg");
   }
 }
