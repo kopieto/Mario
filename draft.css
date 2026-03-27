@@ -1,9 +1,0 @@
-.svg-logo {
-    position: relative;
-    top:4px;
-    width: 1.5rem;
-}
-.svg-logo:hover {
-    width: 2.5rem;
-    top: 0;
-}
