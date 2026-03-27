@@ -62,7 +62,6 @@ body {
 
 .navbar-links li a:hover {
   color: var(--my-blue-color);
-
 }
 
 /* Mobile Toggle */
@@ -320,12 +319,23 @@ input:focus {
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
+.location {
+  text-decoration: none;
+  color: inherit;
+}
+
+.location:hover {
+  color: var(--my-brown-color);
+}
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-bottom: 20px;
+}
+.form-row input {
+  width: 100%;
 }
 
 footer {
@@ -348,9 +358,17 @@ footer {
 .social-icons i:hover {
   font-size: 2.5rem;
 }
+.copyright-container {
+  display: flex;
+  background-color: var(--my-brown-color);
+  /* background-color: blue; */
+  height: 24px;
+  justify-content: center;
+}
 .designer-line {
-  position: absolute;
-  right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .designer-line p,
@@ -359,17 +377,7 @@ footer {
   color: #f9f8f6;
   font-size: 1.5rem;
   line-height: 0;
-}
-footer:hover .designer-line {
-  display: none;
-}
-footer:hover::after {
-  position: absolute;
-  right: 50px;
-  content: "ceco.sirakov@gmail.com";
-  color: #f9f8f6;
-  font-size: 1rem;
-  line-height: 0;
+  margin-top: 4px;
 }
 
 .facebook {
@@ -383,6 +391,16 @@ footer:hover::after {
 }
 .youtube {
   color: #ff0000;
+}
+
+.svg-logo {
+  position: relative;
+  top: 4px;
+  width: 1.5rem;
+}
+.svg-logo:hover {
+  width: 2.5rem;
+  top: 0;
 }
 
 /* ==========================================================================
@@ -425,9 +443,11 @@ footer:hover::after {
   }
 
   input,
-  textarea,
   .quote {
     width: 80%; /* Shrink these from 60% sooner to prevent horizontal pushing */
+  }
+  textarea {
+    width: 100%;
   }
 
   .hero {
@@ -438,7 +458,7 @@ footer:hover::after {
     font-size: 1.5rem;
   }
   .hero p {
-    width: 80%;
+    padding: 0 16px;
     font-size: 1rem;
     text-align: center;
   }
