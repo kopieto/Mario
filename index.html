@@ -46,8 +46,10 @@
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#cards">Services</a></li>
-          <li><a href="#contact-info">Contact</a></li>
-          <li><a target="_blank" href="https://www.facebook.com/photo/?fbid=848055803982454&set=pb.100063341252770.-2207520000">Galery</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+
+          <!-- <li><a target="_blank" href="https://www.facebook.com/photo/?fbid=848055803982454&set=pb.100063341252770.-2207520000">Galery</a></li> -->
 
         </ul>
       </div>
@@ -128,34 +130,83 @@
   </div>
 </section>
 <!-- ................................................................Cards............................................. -->
-<!-- ................................................................Contact........................................... -->
-<section id="contact" class="contact-section">
+ <!-- ...............................................................Gallery............................................. -->
 
+  <section id="gallery" class="gallery" aria-label="Newest Photos">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev"><div class="button-arrow">&#8249;</div> </button>
+      <button class="carousel-button next" data-carousel-button="next"><div class="button-arrow">&#8250;</div></button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="./assets/1.jpg" alt="Nature Image #1">
+        </li>
+        <li class="slide">
+          <img src="./assets/2.jpg" alt="Nature Image #2">
+        </li>
+        <li class="slide">
+          <img src="./assets/3.jpg" alt="Nature Image #3">
+        </li>
+       
+         <li class="slide">
+          <img src="./assets/hero.jpg" alt="Nature Image #1">
+        </li>
+         <li class="slide">
+          <img src="./assets/kitchen.jpg" alt="Nature Image #1">
+        </li>
+         <li class="slide">
+          <img src="./assets/m1.jpeg" alt="Nature Image #1">
+        </li>
+         <li class="slide">
+          <img src="./assets/m2.jpeg" alt="Nature Image #1">
+        </li>
+         <li class="slide">
+          <img src="./assets/16-9/Screen16-9 1.jpg" alt="Nature Image #1">
+        </li>
+         <li class="slide">
+          <img src="./assets/16-9/Screen16-9 2.jpg" alt="Nature Image #1">
+        </li>
+         <li class="slide">
+          <img src="./assets/16-9/Screen16-9 3.jpg" alt="Nature Image #1">
+        </li>
+         <li class="slide">
+          <img src="./assets/16-9/Screen16-9 4.jpg" alt="Nature Image #1">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+<!-- ................................................................Contact........................................... -->
+<div id="contact"></div>
+<section  class="contact">
+<div class="contact-links">
     <h3 id="contact-info">Contact Information</h3>
     <p><strong>📍 Area: </strong><a target="_blank" id="location" class="location" href="https://www.google.com/maps/place/Mario+Painter+%26+Decorator/@51.4527405,-0.3210208,12z/data=!3m1!4b1!4m6!3m5!1s0x406802c094e12f33:0xb8099b8f6ed364cb!8m2!3d51.4526624!4d-0.2386201!16s%2Fg%2F11ysh1z64c?entry=ttu&g_ep=EgoyMDI2MDMyMy4xIKXMDSoASAFQAw%3D%3D">Wimbledon & Surrounding Areas</a> </p>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79561.5750992761!2d-0.23862009999999997!3d51.45266245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406802c094e12f33%3A0xb8099b8f6ed364cb!2sMario%20Painter%20%26%20Decorator!5e0!3m2!1sen!2suk!4v1775312314055!5m2!1sen!2suk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+
     <p><strong>📞 Phone: </strong> +44 7562643363</p>
-    <p><strong>✉️ Email: </strong> mariodedja@yahoo.com
-</p>
+    <p><strong>✉️ Email: </strong> mariodedja@yahoo.com</p>
             <h2>Get a Free Quote</h2>
     <p>Tell us about your project and we'll get back to you.</p>
-  </div>
+</div>
 
   <form id="contact-form" class="contact-form">
     <div class="form-row">
       <div class="form-group">
         <label for="name">Name</label>
-        <input id="name" type="text" name="name" placeholder="John Doe" required>
+        <input id="name" type="text" name="name" autocomplete="on" placeholder="John Doe" required>
       </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input id="email" type="email" name="email" placeholder="john@example.com" required>
+        <input id="email" type="email" name="email" autocomplete="on" placeholder="john@example.com" required>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group">
         <label for="phone">Phone Number</label>
-        <input id="phone" type="tel" name="phone" placeholder="+44 123 456789">
+        <input id="phone" type="tel" name="phone" autocomplete="on" placeholder="+44 123 456789">
       </div>
       <div class="form-group">
         <label for="service">Service Needed</label>
