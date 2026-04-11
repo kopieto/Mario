@@ -249,6 +249,34 @@ input:focus {
   background: #1a252f;
   transform: translateY(-2px);
 }
+/* The Notification Box */
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background-color: var(--my-brown-color);
+  color: var(--my-white-color);
+  text-align: center;
+  min-width: 320px;
+  max-width: 100%;
+
+  padding: 24px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.5;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.notification.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
 
 /* ==========================================================================
    5. COMPONENTS (CARDS)
@@ -463,13 +491,17 @@ footer {
 
 .designer-line p,
 .designer-line span {
-  font-family: "Bonheur Royale", cursive;
   color: #f9f8f6;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 0;
   margin-top: 4px;
 }
-
+.designer-line p:hover {
+  color: var(--my-brown-color);
+  cursor: crosshair;
+}
+.designer-line p:hover span{
+font-size: 1.5rem;}
 .facebook {
   color: #1778f2;
 }
@@ -556,8 +588,8 @@ footer {
     width: 40px;
   }
   .map {
-  width: 40%;
-}
+    width: 40%;
+  }
 }
 
 /* Mobile (600px) */
@@ -670,10 +702,10 @@ footer {
   .carousel-button.next {
     right: 6px;
   }
-    .map {
-      position: static;
-  width: 100%;
-}
+  .map {
+    position: static;
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
