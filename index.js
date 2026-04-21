@@ -23,8 +23,8 @@ window.onload = function () {
     event.preventDefault();
 
     // These IDs from your EmailJS dashboard
-    const serviceID = "service_4qxahgm";
-    const templateID = "template_pak5trb";
+    const serviceID = "service_yq22f07"
+    const templateID = "template_042wlg9";
 
     emailjs.sendForm(serviceID, templateID, this).then(
       () => {
