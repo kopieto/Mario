@@ -11,21 +11,13 @@ navbarLinks.addEventListener("click", () => {
     navbarLinks.classList.toggle("active");
   }
 });
-
-// email js
-// 1. Initialize EmailJS with your Public Key
-
 window.onload = function () {
   const form = document.getElementById("contact-form");
   const notification = document.getElementById("notification");
-
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-
-    // These IDs from your EmailJS dashboard
-    const serviceID = "service_4qxahgm";
-    const templateID = "template_pak5trb";
-
+    const serviceID = "service_yq22f07";
+    const templateID = "template_042wlg9";
     emailjs.sendForm(serviceID, templateID, this).then(
       () => {
         notification.classList.add("is-visible");
@@ -40,8 +32,6 @@ window.onload = function () {
     );
   });
 };
-
-// carousel
 const buttons = document.querySelectorAll("[data-carousel-button]");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -59,3 +49,8 @@ buttons.forEach((button) => {
     delete activeSlide.dataset.active;
   });
 });
+const yearElement = document.getElementById("current-year");
+const currentYear = new Date().getFullYear();
+if (yearElement) {
+  yearElement.textContent = currentYear;
+}
