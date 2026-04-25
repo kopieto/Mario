@@ -52,5 +52,5 @@ buttons.forEach((button) => {
 const yearElement = document.getElementById("current-year");
 const currentYear = new Date().getFullYear();
 if (yearElement) {
-  yearElement.textContent = currentYear;
-}
+  yearElement.textContent ="© "+ currentYear;
+};
